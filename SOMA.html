@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 4 </title>
+
+</head>
+
+<style>
+
+body{
+    font: normal 18pt Arial;
+
+}
+input{
+    font: normal 18pt Arial;
+    width: 100px;
+    
+}
+div#res{
+    margin-top: 20px;
+}
+
+</style>
+
+
+<body>
+    
+
+<h1> Somando valores com interação de Javascript </h1>
+<input type="number" name="t1" id="t1"> +
+<input type="number" name="t2" id="t2">
+<input type="button" value="Somar" onclick="somar()">
+
+ <div id="res"> Resultado </div>
+
+
+<script>
+    function somar(){
+        var t1 = window.document.getElementById('t1')
+        var t2 = window.document.getElementById('t2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(t1.value);
+        var n2 = Number(t2.value);
+        var soma = n1+n2
+        res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong> ${soma} <strong>`
+     
+    }
+</script>
+
+</body>
+</html>
